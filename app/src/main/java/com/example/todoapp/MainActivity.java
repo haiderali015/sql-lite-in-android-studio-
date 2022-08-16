@@ -12,7 +12,10 @@ import android.widget.Toast;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button buttonAdd, buttonViewAll;
+    EditText editName, editRollNumber;
+    Switch switchIsActive;
+    ListView listViewStudent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
