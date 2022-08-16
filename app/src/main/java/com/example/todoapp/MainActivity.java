@@ -20,5 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+
+        buttonAdd = findViewById(R.id.buttonAdd);
+        buttonViewAll = findViewById(R.id.buttonViewAll);
+        editName = findViewById(R.id.editTextName);
+        editRollNumber = findViewById(R.id.editTextRollNumber);
+        switchIsActive = findViewById(R.id.switchStudent);
+        listViewStudent = findViewById(R.id.listViewStudent);
 }
