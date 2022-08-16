@@ -44,3 +44,18 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.addStudent(studentModel);
         }
     });
+
+     buttonViewAll.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            DBHelper dbHelper = new DBHelper(MainActivity.this);
+            List<StudentModel> list = dbHelper.getAllStudents();
+            ArrayAdapter arrayAdapter = new ArrayAdapter<StudentModel>
+                    (MainActivity.this, android.R.layout.simple_list_item_1,list);
+            listViewStudent.setAdapter(arrayAdapter);
+
+        }
+    });
+
+}
+}
