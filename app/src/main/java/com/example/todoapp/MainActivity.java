@@ -28,3 +28,19 @@ public class MainActivity extends AppCompatActivity {
         switchIsActive = findViewById(R.id.switchStudent);
         listViewStudent = findViewById(R.id.listViewStudent);
 }
+ buttonAdd.setOnClickListener(new View.OnClickListener() {
+        StudentModel studentModel;
+
+        @Override
+        public void onClick(View v) {
+            try {
+                studentModel = new StudentModel(editName.getText().toString(), Integer.parseInt(editRollNumber.getText().toString()), switchIsActive.isChecked());
+                //Toast.makeText(MainActivity.this, studentModel.toString(), Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e){
+                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+            DBHelper dbHelper  = new DBHelper(MainActivity.this);
+            dbHelper.addStudent(studentModel);
+        }
+    });
