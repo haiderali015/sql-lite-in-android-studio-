@@ -59,4 +59,11 @@
         android:textSize="24dp"
         android:text="Delete Existing Data"
         android:layout_below="@id/btnUpdate"/>
-    
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="View Data"
+        android:layout_below="@id/btnDelete"/>
+</RelativeLayout>
